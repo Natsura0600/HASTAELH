@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parrilla Hasta el Huesito | Restaurante Asador</title>
+<meta name="description" content="Parrilla Hasta el Huesito, restaurante asador. Parrilladas, cortes a la parrilla, milanesas, pastas y guarniciones. Reservas y pedidos por WhatsApp al 11 3933 7289.">
+<meta property="og:title" content="Parrilla Hasta el Huesito | Restaurante Asador">
+<meta property="og:description" content="Parrilladas, cortes a la parrilla, milanesas y pastas. Reservá por WhatsApp.">
+<meta property="og:image" content="img/parrilla.jpg">
+<meta property="og:type" content="restaurant">
+<meta name="theme-color" content="#0d0a08">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Oswald:wght@500;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Parrilla Hasta el Huesito",
+  "alternateName": "Hasta el Huesito - Restaurante Asador",
+  "servesCuisine": ["Parrilla", "Argentina", "Asado"],
+  "telephone": "+54 9 11 3933-7289",
+  "acceptsReservations": "True",
+  "priceRange": "$$",
+  "paymentAccepted": "Efectivo, Tarjeta de crédito",
+  "hasMap": "https://maps.app.goo.gl/2ZBMZeJxp6tHxUEW9",
+  "image": "img/parrilla.jpg",
+  "logo": "img/logo.jpg",
+  "hasMenu": "#carta"
+}
+</script>
+
+<style>
+  :root {
+    --wood: #0d0a08;
+    --wood-2: #1a1410;
+    --cream: #f3ead8;
+    --paper: #fbf6ec;
+    --ink: #1d1612;
+    --muted: #6e5d4f;
+    --ember: #d9531e;
+    --ember-dark: #b8431a;
+    --gold: #ef9a2f;
+    --line: #e6d9c4;
+    --gingham: #2b4a8b;
+    --display: "Alfa Slab One", Georgia, serif;
+    --cond: "Oswald", "Arial Narrow", sans-serif;
+    --wa: #1f9d55;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Lato", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.15; margin: 0; letter-spacing: .01em; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+  /* Header */
+  header.top {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(28, 18, 12, .96);
+    border-bottom: 1px solid #3a281b;
+  }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 12px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 400; color: var(--cream); text-decoration: none; font-size: 1.15rem; letter-spacing: .02em; white-space: nowrap; }
+  .brand span { color: var(--gold); }
+  nav.links { display: flex; gap: 22px; }
+  nav.links a { color: #e9dccb; text-decoration: none; font-size: .95rem; }
+  nav.links a:hover { color: var(--gold); }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 12px 22px; border-radius: 999px; font-weight: 700; text-decoration: none;
+    font-size: 1rem; border: 2px solid transparent; transition: background .15s, color .15s;
+  }
+  .btn-wa { background: var(--wa); color: #fff; }
+  .btn-wa:hover { background: #188547; }
+  .btn-ghost { border-color: rgba(246, 239, 227, .7); color: var(--cream); }
+  .btn-ghost:hover { background: rgba(246, 239, 227, .12); }
+  .btn-sm { padding: 8px 16px; font-size: .9rem; }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+  @media (max-width: 760px) { nav.links { display: none; } }
+
+  .brand-logo { width: 40px; height: 40px; border-radius: 50%; mix-blend-mode: screen; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .gingham {
+    height: 14px;
+    background-color: #fff;
+    background-image:
+      linear-gradient(90deg, rgba(43,74,139,.55) 50%, transparent 50%),
+      linear-gradient(rgba(43,74,139,.55) 50%, transparent 50%);
+    background-size: 14px 14px;
+  }
+
+  /* Hero */
+  .hero {
+    position: relative; color: var(--cream);
+    min-height: 88vh; display: flex; align-items: center;
+    background: var(--wood) url("img/chorizos.jpg") center 60% / cover no-repeat;
+    text-align: center;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 40%, rgba(13,10,8,.88) 0%, rgba(13,10,8,.7) 45%, rgba(13,10,8,.94) 100%);
+  }
+  .hero .wrap { position: relative; padding-top: 40px; padding-bottom: 56px; }
+  .eyebrow { font-family: var(--cond); text-transform: uppercase; letter-spacing: .22em; font-size: .9rem; color: var(--gold); font-weight: 700; }
+  .hero .wrap { width: 100%; }
+  .hero-logo { width: min(420px, 82vw); height: auto; margin: 0 auto 8px; mix-blend-mode: screen; }
+  .hero p.lead { font-size: 1.2rem; max-width: 560px; margin: 0 auto 28px; color: #efe4d4; }
+  .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+  /* El lugar */
+  .lugar .grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 44px; align-items: center; }
+  .lugar img { width: 100%; border-radius: 12px; box-shadow: 0 14px 34px rgba(29,22,18,.18); }
+  .lugar h2 { font-size: clamp(1.9rem, 5vw, 2.6rem); margin: 8px 0 14px; }
+  .lugar .eyebrow { color: var(--ember); }
+  .lugar p { color: var(--muted); font-size: 1.08rem; margin: 0 0 14px; }
+  @media (max-width: 820px) { .lugar .grid { grid-template-columns: 1fr; gap: 24px; } }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  .section-head { text-align: center; margin-bottom: 40px; }
+  .section-head h2 { font-size: clamp(2rem, 5vw, 2.8rem); }
+  .section-head p { color: var(--muted); margin: 10px auto 0; max-width: 560px; }
+  .rule { width: 64px; height: 3px; background: var(--ember); margin: 16px auto 0; border-radius: 2px; }
+
+  /* Promo */
+  .promo { background: var(--wood); color: var(--cream); }
+  .promo .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .promo img { border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,.45); max-height: 640px; margin: 0 auto; }
+  .promo h2 { font-size: clamp(2rem, 5vw, 2.8rem); margin: 8px 0 14px; }
+  .promo .price { font-family: var(--display); font-size: 2.6rem; color: var(--gold); font-weight: 400; margin: 8px 0 4px; }
+  .promo ul { padding-left: 20px; color: #e9dccb; }
+  .promo .note { background: rgba(224,166,74,.14); border-left: 3px solid var(--gold); padding: 10px 14px; margin: 18px 0 24px; border-radius: 4px; }
+  @media (max-width: 820px) { .promo .grid { grid-template-columns: 1fr; } }
+
+  /* Menu */
+  .menu { background: var(--paper); }
+  .tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 32px; }
+  .tabs a {
+    text-decoration: none; padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px;
+    font-size: .92rem; background: #fff; color: var(--ink);
+  }
+  .tabs a:hover { border-color: var(--ember); color: var(--ember-dark); }
+  .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  @media (max-width: 820px) { .menu-grid { grid-template-columns: 1fr; } }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 26px 24px;
+    scroll-margin-top: 80px;
+  }
+  .card h3 { font-size: 1.6rem; color: var(--ink); display: flex; align-items: baseline; gap: 10px; }
+  .card h3::after { content: ""; flex: 1; border-bottom: 2px solid var(--ember); transform: translateY(-6px); opacity: .5; }
+  .card .sub { color: var(--muted); font-size: .92rem; margin: 6px 0 0; }
+  .items { list-style: none; padding: 0; margin: 16px 0 0; }
+  .items li { display: flex; align-items: baseline; gap: 8px; padding: 9px 0; border-bottom: 1px dashed var(--line); }
+  .items li:last-child { border-bottom: 0; }
+  .items .name { font-weight: 700; }
+  .items .desc { display: block; font-weight: 400; color: var(--muted); font-size: .9rem; }
+  .items .dots { flex: 1; }
+  .items .p { font-weight: 700; color: var(--ember-dark); white-space: nowrap; }
+  .items .p.c { color: var(--muted); font-weight: 400; font-style: italic; }
+  .two-col { display: grid; grid-template-columns: auto 70px 70px; gap: 0 10px; margin-top: 16px; font-size: .97rem; }
+  .two-col > div { padding: 9px 0; border-bottom: 1px dashed var(--line); }
+  .two-col .h { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); border-bottom: 1px solid var(--line); text-align: right; }
+  .two-col .h:first-child { text-align: left; }
+  .two-col .n { font-weight: 700; }
+  .two-col .v { text-align: right; color: var(--ember-dark); font-weight: 700; white-space: nowrap; }
+  .two-col .v.e { color: #b9a894; font-weight: 400; }
+  .span-2 { grid-column: 1 / -1; }
+  .pay {
+    margin-top: 28px; text-align: center; color: var(--muted); font-size: .95rem;
+    border: 1px solid var(--line); border-radius: 10px; padding: 14px; background: #fff;
+  }
+  .pay strong { color: var(--ink); }
+
+  /* Gallery */
+  .gallery .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .gallery figure { margin: 0; border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 5; background: var(--wood-2); }
+  .gallery img { width: 100%; height: 100%; object-fit: cover; }
+  .gallery figcaption { font-size: .9rem; color: var(--muted); padding-top: 8px; }
+
+  /* Visit */
+  .visit { background: var(--wood); color: var(--cream); }
+  .visit .section-head p { color: #cdbca7; }
+  .visit .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 820px) { .visit .grid { grid-template-columns: 1fr; } }
+  .info {
+    background: var(--wood-2); border: 1px solid #3d2a1d; border-radius: 12px; padding: 26px 22px; text-align: center;
+  }
+  .info .ico { width: 44px; height: 44px; margin: 0 auto 12px; color: var(--gold); }
+  .info h3 { font-size: 1.35rem; margin-bottom: 8px; }
+  .info p { margin: 0 0 18px; color: #e0d2bf; }
+
+  footer { background: #120b07; color: #a8957f; text-align: center; padding: 28px 16px 96px; font-size: .9rem; }
+  footer strong { color: var(--cream); font-family: var(--display); font-weight: 400; }
+  footer img { width: 84px; margin: 0 auto 10px; mix-blend-mode: screen; }
+
+  /* Floating WhatsApp */
+  .wa-float {
+    position: fixed; right: 16px; bottom: 16px; z-index: 30;
+    width: 60px; height: 60px; border-radius: 50%; background: var(--wa); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,.3);
+  }
+  .wa-float svg { width: 32px; height: 32px; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="img/logo.jpg" alt="" width="40" height="40" class="brand-logo">Hasta el <span>Huesito</span></a>
+    <nav class="links" aria-label="Secciones">
+      <a href="#carta">Carta</a>
+      <a href="#lugar">El lugar</a>
+      <a href="#promo">Parrilla libre</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#visitanos">Ubicación</a>
+    </nav>
+    <a class="btn btn-wa btn-sm" href="https://wa.me/5491139337289?text=Hola!%20Quiero%20hacer%20una%20reserva." target="_blank" rel="noopener">Reservar</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <h1 class="sr-only">Parrilla Hasta el Huesito, Restaurante Asador</h1>
+      <img class="hero-logo" src="img/logo.jpg" alt="Hasta el Huesito, Restaurante Asador" width="640" height="640">
+      <p class="lead">Carne a la parrilla, parrilladas para compartir, milanesas y pastas caseras. Vení a comer como en casa.</p>
+      <div class="actions">
+        <a class="btn btn-wa" href="https://wa.me/5491139337289?text=Hola!%20Quiero%20hacer%20una%20reserva." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>
+          Reservá por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#carta">Ver la carta</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="gingham" aria-hidden="true"></div>
+
+  <section class="lugar" id="lugar">
+    <div class="wrap grid">
+      <img src="img/salon.jpg" alt="Salón de Hasta el Huesito con mesas y manteles a cuadros" loading="lazy" width="408" height="306">
+      <div>
+        <div class="eyebrow">El lugar</div>
+        <h2>Un salón de parrilla de los de siempre</h2>
+        <p>Mesas con manteles a cuadros, lugar para venir en familia o con amigos, y la parrilla siempre prendida.</p>
+        <p>Ideal para almuerzos, cenas y despedidas de fin de año.</p>
+        <a class="btn btn-wa" href="https://wa.me/5491139337289?text=Hola!%20Quiero%20reservar%20una%20mesa." target="_blank" rel="noopener">Reservá tu mesa</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="promo" id="promo">
+    <div class="wrap grid">
+      <div>
+        <div class="eyebrow">Despedidas de fin de año</div>
+        <h2>Parrilla libre: ¡comé todo lo que quieras!</h2>
+        <div class="price">$40.000 <small style="font-size:1rem;font-family:Lato,sans-serif;color:#e9dccb;font-weight:400">por persona</small></div>
+        <ul>
+          <li><strong>Entrada:</strong> empanada de carne a cuchillo</li>
+          <li><strong>Parrilla:</strong> asado, vacío, pechito de cerdo, bondiola, chorizo y morcilla, chinchulines y pollo</li>
+          <li><strong>Guarniciones:</strong> ensalada de lechuga y tomate, mixta, rusa, tortilla de papa y papas fritas</li>
+          <li><strong>Bebida:</strong> 1 de 500 cc por persona (Coca-Cola, cerveza en lata, agua saborizada, agua con o sin gas, o copa de vino tinto o blanco)</li>
+          <li><strong>Postre:</strong> 1 por persona (flan, helado, budín de pan, frutillas o duraznos)</li>
+          <li><strong>Café</strong></li>
+        </ul>
+        <div class="note">Promoción válida <strong>solo reservando</strong> en el mes de noviembre.</div>
+        <a class="btn btn-wa" href="https://wa.me/5491139337289?text=Hola!%20Quiero%20reservar%20la%20parrilla%20libre%20para%20una%20despedida." target="_blank" rel="noopener">Reservar parrilla libre</a>
+      </div>
+      <img src="img/promo-parrilla-libre.jpg" alt="Afiche de la promoción Parrilla Libre de Hasta el Huesito, $40.000 por persona" loading="lazy" width="742" height="1280">
+    </div>
+  </section>
+
+  <section class="menu" id="carta">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Nuestra carta</h2>
+        <p>Precios en efectivo.</p>
+        <div class="rule"></div>
+      </div>
+
+      <nav class="tabs" aria-label="Categorías de la carta">
+        <a href="#entradas">Entradas</a>
+        <a href="#parrilladas">Parrilladas</a>
+        <a href="#porciones">Porciones</a>
+        <a href="#milanesas">Milanesas</a>
+        <a href="#pastas">Pastas</a>
+        <a href="#guarniciones">Guarniciones</a>
+      </nav>
+
+      <div class="menu-grid">
+        <div>
+          <article class="card" id="entradas">
+            <h3>Entradas</h3>
+            <ul class="items">
+              <li><span class="name">Empanadas fritas<span class="desc">Carne cortada a cuchillo</span></span><span class="dots"></span><span class="p">$3.000</span></li>
+              <li><span class="name">Provoleta</span><span class="dots"></span><span class="p">$8.000</span></li>
+              <li><span class="name">Provoleta de la casa<span class="desc">Rodajas de tomate, salsa de ajo y rúcula</span></span><span class="dots"></span><span class="p">$10.000</span></li>
+            </ul>
+          </article>
+
+          <article class="card" id="parrilladas" style="margin-top:28px">
+            <h3>Parrilladas</h3>
+            <p class="sub">Chorizo, morcilla, chinchulín, asado, pechito de cerdo, centro de entraña y pollo.</p>
+            <ul class="items">
+              <li><span class="name">Parrillada para 1</span><span class="dots"></span><span class="p">$33.000</span></li>
+              <li><span class="name">Parrillada para 2</span><span class="dots"></span><span class="p">$50.000</span></li>
+              <li><span class="name">Más de 2 personas<span class="desc">Se cobra por cada persona</span></span><span class="dots"></span><span class="p">$25.000 c/u</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="card" id="porciones">
+          <h3>Porciones</h3>
+          <ul class="items">
+            <li><span class="name">½ porción de cualquier corte<span class="desc">Excepto matambre a la pizza</span></span><span class="dots"></span><span class="p">$20.000</span></li>
+            <li><span class="name">Vacío</span><span class="dots"></span><span class="p">$27.000</span></li>
+            <li><span class="name">Asado</span><span class="dots"></span><span class="p">$27.000</span></li>
+            <li><span class="name">Matambre a la pizza</span><span class="dots"></span><span class="p">$27.000</span></li>
+            <li><span class="name">Centro de entraña</span><span class="dots"></span><span class="p">$27.000</span></li>
+            <li><span class="name">Bondiola</span><span class="dots"></span><span class="p">$27.000</span></li>
+            <li><span class="name">Pechito de cerdo</span><span class="dots"></span><span class="p">$27.000</span></li>
+            <li><span class="name">Matambre de cerdo</span><span class="dots"></span><span class="p">$27.000</span></li>
+            <li><span class="name">¼ de pollo<span class="desc">Pechuga, pata y muslo</span></span><span class="dots"></span><span class="p">$8.000</span></li>
+            <li><span class="name">Chorizo</span><span class="dots"></span><span class="p">$5.000</span></li>
+            <li><span class="name">Morcilla</span><span class="dots"></span><span class="p">$5.000</span></li>
+            <li><span class="name">Chinchulín</span><span class="dots"></span><span class="p">$10.000</span></li>
+            <li><span class="name">Riñón</span><span class="dots"></span><span class="p c">Consultar</span></li>
+            <li><span class="name">Molleja</span><span class="dots"></span><span class="p c">Consultar</span></li>
+            <li><span class="name">Cordero</span><span class="dots"></span><span class="p c">Consultar</span></li>
+            <li><span class="name">Lechón</span><span class="dots"></span><span class="p c">Consultar</span></li>
+          </ul>
+        </article>
+
+        <article class="card" id="milanesas">
+          <h3>Milanesas</h3>
+          <ul class="items">
+            <li><span class="name">Milanesa</span><span class="dots"></span><span class="p">$14.000</span></li>
+            <li><span class="name">Milanesa con guarnición</span><span class="dots"></span><span class="p">$21.000</span></li>
+            <li><span class="name">Milanesa napolitana con guarnición</span><span class="dots"></span><span class="p">$24.000</span></li>
+            <li><span class="name">Sándwich de milanesa</span><span class="dots"></span><span class="p">$15.000</span></li>
+          </ul>
+        </article>
+
+        <article class="card" id="pastas">
+          <h3>Pastas</h3>
+          <p class="sub">Los precios incluyen la salsa: crema, fileto, rosa, champiñones, bolognesa o estofado.</p>
+          <ul class="items">
+            <li><span class="name">Ñoquis<span class="desc">Papa, calabaza, espinaca o tricolor</span></span><span class="dots"></span><span class="p">$20.000</span></li>
+            <li><span class="name">Sorrentinos de muzza y jamón</span><span class="dots"></span><span class="p">$20.000</span></li>
+            <li><span class="name">Sorrentinos de muzza y calabaza</span><span class="dots"></span><span class="p">$20.000</span></li>
+            <li><span class="name">Ravioles<span class="desc">Ricota y jamón, pollo y verdura, o 4 quesos</span></span><span class="dots"></span><span class="p">$20.000</span></li>
+          </ul>
+        </article>
+
+        <article class="card span-2" id="guarniciones">
+          <h3>Guarniciones</h3>
+          <div class="two-col">
+            <div class="h"></div><div class="h">Chica</div><div class="h">Grande</div>
+            <div class="n">Papas fritas</div><div class="v e">—</div><div class="v">$10.000</div>
+            <div class="n">Papas fritas con cheddar o provenzal</div><div class="v e">—</div><div class="v">$10.000</div>
+            <div class="n">Ensalada rusa</div><div class="v">$8.000</div><div class="v">$10.000</div>
+            <div class="n">Lechuga y tomate</div><div class="v">$5.000</div><div class="v">$6.000</div>
+            <div class="n">Mixta (lechuga, tomate y cebolla)</div><div class="v">$5.000</div><div class="v">$6.000</div>
+            <div class="n">Zanahoria y huevo</div><div class="v">$5.000</div><div class="v">$6.000</div>
+            <div class="n">Rúcula y parmesano</div><div class="v">$5.000</div><div class="v">$7.000</div>
+            <div class="n">Remolacha y huevo</div><div class="v">$5.000</div><div class="v">$6.000</div>
+            <div class="n">Tortilla de papa (porción)</div><div class="v e">—</div><div class="v">$7.000</div>
+            <div class="n">Tortilla de papa (entera)</div><div class="v e">—</div><div class="v e">Consultar</div>
+          </div>
+        </article>
+      </div>
+
+      <div class="pay">Los precios son en <strong>efectivo</strong>. Aceptamos tarjetas (<strong>solo crédito, 10% de recargo</strong>).</div>
+    </div>
+  </section>
+
+  <div class="gingham" aria-hidden="true"></div>
+
+  <section class="gallery" id="fotos">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Directo de la parrilla</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="grid">
+        <figure><img src="img/chorizos.jpg" alt="Chorizos dorándose en la parrilla de Hasta el Huesito" loading="lazy" width="1400" height="1867"></figure>
+        <figure><img src="img/parrilla.jpg" alt="Parrilla con chinchulines, chorizos y asado" loading="lazy" width="1400" height="1867"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visitanos">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Visitanos</h2>
+        <p>Reservas, pedidos y consultas por WhatsApp.</p>
+        <div class="rule"></div>
+      </div>
+      <div class="grid">
+        <div class="info">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <h3>Ubicación</h3>
+          <p>Encontranos en Google Maps.</p>
+          <a class="btn btn-ghost btn-sm" href="https://maps.app.goo.gl/2ZBMZeJxp6tHxUEW9" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+        <div class="info">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <h3>Horarios</h3>
+          <!-- COMPLETAR: días y horarios de atención -->
+          <p>Consultá días y horarios por WhatsApp.</p>
+          <a class="btn btn-ghost btn-sm" href="https://wa.me/5491139337289?text=Hola!%20%C2%BFQu%C3%A9%20d%C3%ADas%20y%20horarios%20atienden%3F" target="_blank" rel="noopener">Consultar</a>
+        </div>
+        <div class="info">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          <h3>Reservas y pedidos</h3>
+          <p>WhatsApp: <strong>11 3933-7289</strong></p>
+          <a class="btn btn-wa btn-sm" href="https://wa.me/5491139337289?text=Hola!%20Quiero%20hacer%20un%20pedido." target="_blank" rel="noopener">Escribinos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="img/logo.jpg" alt="" width="84" height="84">
+  <strong>Parrilla Hasta el Huesito</strong> · Restaurante Asador<br>
+  Reservas por WhatsApp: 11 3933-7289
+</footer>
+
+<a class="wa-float" href="https://wa.me/5491139337289?text=Hola!%20Quiero%20hacer%20una%20reserva." target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>
+</a>
+
+</body>
+</html>
